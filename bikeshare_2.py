@@ -158,13 +158,37 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-
+    user_type_count = df['User Type'].value_counts()
+    print('Counts of user type: ', user_type_count)
 
     # Display counts of gender
-
+    try:
+        gender_count = df['Gender'].value_counts()
+        print('Counts of gender: ', gender_count)
+    except KeyError:
+        print('No data available')
 
     # Display earliest, most recent, and most common year of birth
+    # the most earliest birth year
+    try:
+        earliest_year = df['Birth Year'].min()
+        print("The most earliest birth year:", earliest_year)
+    except KeyError:
+        print('No data available')
 
+    # the most recent birth year
+    try:
+        most_recent = df['Birth Year'].max()
+        print("The most recent birth year:", most_recent)
+    except KeyError:
+        print('No data available')
+
+     # the most common birth year
+    try:
+        most_common_year = df['Birth Year'].value_counts().idxmax()
+        print("The most common birth year:", most_common_year)
+    except KeyError:
+        print('No data available')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
