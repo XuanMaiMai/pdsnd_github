@@ -192,6 +192,22 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+def display_raw_data(df):
+    """Displays raw data on user request. """
+
+    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter "yes" or "no"\n').lower()
+    start_loc = 0
+    while view_data == 'yes':
+        print(df.head())
+        while True:
+            start_loc += 5
+            view_data = input("Do you wish to see more 5 rows : ").lower()
+            if view_data == 'yes':
+                print(df[start_loc:start_loc+5])
+                continue
+            else:
+                break
+    print('-'*40)
 
 
 def main():
