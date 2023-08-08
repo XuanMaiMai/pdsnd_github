@@ -13,4 +13,8 @@ Putting what I've learned about version control and GitHub into practice via thi
 I followed the guidelines [here](https://docs.google.com/document/d/1PL-MnkFuN49p5Y-M6pz6GZGzzdoohocs9UaMWZfk9dQ/edit?pli=1)
 
 ### Credits
-Here are some links that I've already referred to:
+Here are some resources that I referred to:
+
+### Table of content
+
+### Known bugs
